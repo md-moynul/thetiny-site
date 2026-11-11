@@ -25,7 +25,7 @@ const analyticsData: AnalyticsRow[] = [
 
 export default function Features() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+    <section className="w-full bg-[#f8f9fc] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Content & Feature Checklist */}

@@ -66,7 +66,7 @@ export default function PopularLinks() {
   };
 
   return (
-    <section className="w-full bg-[#fcfbfe] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
@@ -83,7 +83,7 @@ export default function PopularLinks() {
           {popularLinks.map((link) => (
             <div
               key={link.id}
-              className="bg-white rounded-xl sm:rounded-2xl border border-gray-200/80 p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-purple-200 hover:shadow-md transition-all shadow-xs"
+              className=" rounded-xl sm:rounded-2xl bg-gray-50 border border-gray-200 p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-purple-200 hover:shadow-md transition-all shadow-xs"
             >
               {/* Left Column: URLs */}
               <div className="min-w-0 flex-1">

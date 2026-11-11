@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+    <section className="w-full bg-[#f8f9fc] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-t ">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
