@@ -10,7 +10,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thetiny-site-ten.vercel.app"),
   title: "thetiny.site",
   description:
     "Shorten Your URL in seconds Create short, memorable links that you can share anywhere. Track every click with powerful analytics.",
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     title: "thetiny.site",
     description:
       "Shorten Your URL in seconds Create short, memorable links that you can share anywhere. Track every click with powerful analytics.",
-    url: "https://thetiny-site-ten.vercel.app",
+    url: "https://thetiny.site",
     siteName: "thetiny.site",
     type: "website",
   },
