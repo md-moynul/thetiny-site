@@ -1,4 +1,12 @@
-import { Hero, Stats, PopularLinks } from "@/components";
+import {
+  Hero,
+  Stats,
+  WhyChooseUs,
+  PopularLinks,
+  Features,
+  Pricing,
+  Testimonials,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -6,6 +14,10 @@ export default function Home() {
       <Hero />
       <Stats />
       <PopularLinks />
+      <Features />
+      <Pricing />
+      <Testimonials />
+      <WhyChooseUs />
     </>
   );
 }

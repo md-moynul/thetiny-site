@@ -5,15 +5,15 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-[#f9f7ff] via-[#fbfaff] to-[#f5f1ff] pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
       {/* Soft Ambient Background Glows */}
       <div
-        className="pointer-events-none absolute -top-24 left-1/4 -translate-x-1/2 w-137.5 h-112.5 bg-purple-200/40 rounded-full blur-3xl -z-10"
+        className="pointer-events-none absolute -top-24 left-1/4 -translate-x-1/2 w-[550px] h-[450px] bg-purple-200/40 rounded-full blur-3xl -z-10"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -top-20 right-1/4 translate-x-1/2 w-137.5 h-112.5 bg-violet-200/35 rounded-full blur-3xl -z-10"
+        className="pointer-events-none absolute -top-20 right-1/4 translate-x-1/2 w-[550px] h-[450px] bg-violet-200/35 rounded-full blur-3xl -z-10"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-187.5 h-87.5 bg-purple-100/50 rounded-full blur-3xl -z-10"
+        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[750px] h-[350px] bg-purple-100/50 rounded-full blur-3xl -z-10"
         aria-hidden="true"
       />
 
@@ -49,7 +49,7 @@ export default function Hero() {
         </p>
 
         {/* Central Auth Prompt Card */}
-        <div className="mt-10 sm:mt-12 w-full max-w-180 mx-auto bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl shadow-purple-900/5 border border-purple-100/70 text-center transition-all">
+        <div className="mt-10 sm:mt-12 w-full max-w-xl mx-auto bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl shadow-purple-900/5 border border-purple-100/70 text-center transition-all">
           {/* Lock Icon Circle */}
           <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-[#f4effe] flex items-center justify-center text-[#5b21f3]">
             <svg
