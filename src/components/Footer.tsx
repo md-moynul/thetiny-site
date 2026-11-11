@@ -27,10 +27,16 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white border-t border-t-black">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+    <footer
+      className="py-12 px-6 border-t"
+      style={{
+        background: "rgb(255, 255, 255)",
+        borderColor: "rgb(229, 231, 235)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12">
           {/* Brand Info (Left Column) */}
           <div className="lg:col-span-6 flex flex-col items-start">
             <Link href="/" className="inline-block" aria-label="Home">
@@ -185,7 +191,7 @@ export default function Footer() {
         </div>
 
         {/* Sub-footer Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div className="pt-8 mt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p className="text-center sm:text-left">
             © 2026{" "}
             <span className="text-[#5b21f3] font-medium">
@@ -210,4 +216,3 @@ export default function Footer() {
     </footer>
   );
 }
-

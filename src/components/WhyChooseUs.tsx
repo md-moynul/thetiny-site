@@ -136,24 +136,35 @@ const reasons: ReasonItem[] = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-[#f8f9fc] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 ">
+    <section
+      className="py-20 px-6"
+      style={{ background: "rgb(255, 255, 255)" }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2
+            style={{
+              fontWeight: 800,
+              fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
+              color: "rgb(26, 26, 26)",
+              lineHeight: 1.2,
+              marginBottom: "8px",
+            }}
+          >
             Why Choose Our Platform?
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-500">
+          <p style={{ color: "rgb(107, 114, 128)", fontSize: "1rem" }}>
             Everything you need to manage and track your links
           </p>
         </div>
 
         {/* 6 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {reasons.map((item) => (
             <div
               key={item.title}
-              className="bg-white rounded-2xl border border-gray-200/80 p-6 sm:p-7 shadow-xs hover:border-purple-200 hover:shadow-md transition-all flex flex-col justify-start"
+              className="bg-white rounded-2xl border border-[#e5e7eb] p-6 sm:p-7 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-start"
             >
               <div>{item.icon}</div>
               <h3 className="text-base sm:text-lg font-bold text-gray-900 mt-4 tracking-tight">
@@ -169,4 +180,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

@@ -2,64 +2,112 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#f8f9fc] to-[#eef0ff] pt-10 pb-16 sm:pt-10 sm:pb-20 lg:pt-10 lg:pb-24 px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
-      {/* Soft Ambient Background Glows */}
-      <div
-        className="pointer-events-none absolute -top-24 left-1/4 -translate-x-1/2 w-137.5 h-112.5 bg-purple-200/40 rounded-full blur-3xl -z-10"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -top-20 right-1/4 translate-x-1/2 w-137.5 h-112.5 bg-violet-200/35 rounded-full blur-3xl -z-10"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-187.5 h-87.5 bg-purple-100/50 rounded-full blur-3xl -z-10"
-        aria-hidden="true"
-      />
-
-      <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
-        {/* Top Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f4effe] border border-[#e5d9fd] text-[#5b21f3] text-xs sm:text-sm font-medium shadow-xs">
-          <svg
-            className="w-4 h-4 text-[#5b21f3]"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
+    <section
+      className="pt-28 pb-20 px-6"
+      style={{
+        background:
+          "linear-gradient(135deg, rgb(248, 249, 252) 0%, rgb(238, 240, 255) 100%)",
+      }}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Top Header Block */}
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Badge */}
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6"
+            style={{
+              background: "rgba(91, 33, 243, 0.08)",
+              border: "1px solid rgba(91, 33, 243, 0.2)",
+            }}
           >
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-            <polyline points="16 7 22 7 22 13" />
-          </svg>
-          <span>Trusted by thousands of users</span>
-        </div>
-
-        {/* Main Headline */}
-        <h1 className="mt-6 text-center text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-gray-950 leading-[1.12]">
-          Shorten Your URL
-          <span className="block text-[#5b21f3] mt-1 sm:mt-2">in seconds</span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="mt-5 text-center text-gray-500 text-sm sm:text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-          Create short, memorable links that you can share anywhere.
-          <br className="hidden sm:inline" /> Track every click with powerful analytics.
-        </p>
-
-        {/* Central Auth Prompt Card */}
-        <div className="mt-10 sm:mt-12 w-full max-w-190 mx-auto bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-xl shadow-purple-900/5 border border-purple-100/70 text-center transition-all">
-          {/* Lock Icon Circle */}
-          <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-[#f4effe] flex items-center justify-center text-[#5b21f3]">
             <svg
-              className="w-6 h-6 sm:w-7 sm:h-7"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="#5b21f3"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="lucide lucide-trending-up"
+              aria-hidden="true"
+            >
+              <path d="M16 7h6v6" />
+              <path d="m22 7-8.5 8.5-5-5L2 17" />
+            </svg>
+            <span
+              style={{
+                fontSize: "0.8rem",
+                fontWeight: 600,
+                color: "rgb(91, 33, 243)",
+              }}
+            >
+              Trusted by thousands of users
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h1
+            style={{
+              fontWeight: 900,
+              fontSize: "clamp(2rem, 6vw, 3.5rem)",
+              lineHeight: 1.1,
+              marginBottom: "20px",
+              color: "rgb(10, 10, 20)",
+            }}
+          >
+            Shorten Your URL
+            <br />
+            <span style={{ color: "rgb(91, 33, 243)" }}>in seconds</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "rgb(107, 114, 128)",
+              lineHeight: 1.6,
+              maxWidth: "520px",
+              margin: "0px auto 36px",
+            }}
+          >
+            Create short, memorable links that you can share anywhere. Track
+            every click with powerful analytics.
+          </p>
+        </div>
+
+        {/* Central Auth Prompt Card */}
+        <div
+          className="rounded-2xl p-8 md:p-12 text-center"
+          style={{
+            background: "rgb(255, 255, 255)",
+            boxShadow: "rgba(91, 33, 243, 0.1) 0px 4px 40px",
+            border: "1px solid rgb(229, 231, 235)",
+            maxWidth: "720px",
+            margin: "0px auto",
+          }}
+        >
+          {/* Lock Icon Circle */}
+          <div
+            className="inline-flex items-center justify-center rounded-full mb-5"
+            style={{
+              width: "64px",
+              height: "64px",
+              background: "rgba(91, 33, 243, 0.1)",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5b21f3"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-lock"
               aria-hidden="true"
             >
               <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
@@ -67,30 +115,56 @@ export default function Hero() {
             </svg>
           </div>
 
-          {/* Card Title */}
-          <h2 className="mt-5 text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
+          <h3
+            style={{
+              fontWeight: 800,
+              fontSize: "1.4rem",
+              marginBottom: "10px",
+              color: "rgb(26, 26, 26)",
+            }}
+          >
             Login to make your URL short
-          </h2>
+          </h3>
 
-          {/* Card Description */}
-          <p className="mt-2.5 text-xs sm:text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-            Sign in or create a free account to start shortening links, generating QR codes, and tracking every click in real time.
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "rgb(107, 114, 128)",
+              lineHeight: 1.6,
+              maxWidth: "440px",
+              margin: "0px auto 26px",
+            }}
+          >
+            Sign in or create a free account to start shortening links,
+            generating QR codes, and tracking every click in real time.
           </p>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link
               href="/login"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#5b21f3] hover:bg-[#4d1bd6] active:bg-[#4317be] text-white text-sm font-semibold transition-all shadow-md shadow-purple-600/20 hover:shadow-lg hover:shadow-purple-600/30"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto hover:opacity-90 transition-opacity"
+              style={{
+                background: "rgb(91, 33, 243)",
+                color: "rgb(255, 255, 255)",
+                borderRadius: "10px",
+                padding: "12px 28px",
+                fontWeight: 700,
+                fontSize: "0.95rem",
+                boxShadow: "rgba(91, 33, 243, 0.3) 0px 4px 14px",
+              }}
             >
               <svg
-                className="w-4 h-4 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className="lucide lucide-lock"
                 aria-hidden="true"
               >
                 <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
@@ -101,10 +175,34 @@ export default function Hero() {
 
             <Link
               href="/signup"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white border border-[#5b21f3] text-[#5b21f3] hover:bg-[#f4effe] active:bg-purple-100 text-sm font-semibold transition-all"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto hover:bg-gray-50 transition-colors"
+              style={{
+                border: "1.5px solid rgb(229, 231, 235)",
+                borderRadius: "10px",
+                padding: "12px 28px",
+                fontWeight: 700,
+                fontSize: "0.95rem",
+                color: "rgb(26, 26, 26)",
+                background: "rgb(255, 255, 255)",
+              }}
             >
               <span>Sign Up Free</span>
-              <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-right"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
@@ -112,4 +210,3 @@ export default function Hero() {
     </section>
   );
 }
-

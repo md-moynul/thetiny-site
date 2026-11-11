@@ -25,83 +25,165 @@ const analyticsData: AnalyticsRow[] = [
 
 export default function Features() {
   return (
-    <section className="w-full bg-[#f8f9fc] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 ">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Content & Feature Checklist */}
-          <div>
-            <span className="text-xs font-bold tracking-wider text-[#5b21f3] uppercase mb-3 inline-block">
-              PREMIUM
-            </span>
+    <section
+      id="features"
+      className="py-20 px-6"
+      style={{ background: "rgb(248, 249, 252)" }}
+    >
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left Column: Content & Checklist */}
+        <div>
+          <p
+            style={{
+              fontWeight: 700,
+              fontSize: "0.75rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "rgb(91, 33, 243)",
+              marginBottom: "12px",
+            }}
+          >
+            Premium
+          </p>
+          <h2
+            style={{
+              fontWeight: 800,
+              fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
+              color: "rgb(26, 26, 26)",
+              lineHeight: 1.2,
+              marginBottom: "20px",
+            }}
+          >
+            Unlock powerful tools for serious growth.
+          </h2>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "rgb(107, 114, 128)",
+              lineHeight: 1.75,
+              marginBottom: "28px",
+            }}
+          >
+            Go beyond basic shortening with a full suite of marketing and
+            developer tools — custom branded links, UTM builders, deep
+            analytics, QR codes, and a REST API for your apps.
+          </p>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-[1.15]">
-              Unlock powerful tools for serious growth.
-            </h2>
-
-            <p className="mt-4 sm:mt-5 text-sm sm:text-base text-gray-500 leading-relaxed max-w-lg">
-              Go beyond basic shortening with a full suite of marketing and
-              developer tools — custom branded links, UTM builders, deep
-              analytics, QR codes, and a REST API for your apps.
-            </p>
-
-            {/* Checklist */}
-            <ul className="mt-7 sm:mt-8 space-y-3.5">
-              {features.map((feature) => (
-                <li
-                  key={feature.text}
-                  className="flex items-center gap-3 text-sm sm:text-base font-medium text-gray-800"
+          <div className="flex flex-col gap-3">
+            {features.map((feature) => (
+              <div key={feature.text} className="flex items-center gap-3">
+                <div
+                  className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                  style={{ background: "rgba(91, 33, 243, 0.12)" }}
                 >
-                  <span className="w-5 h-5 rounded-full bg-[#f4effe] text-[#5b21f3] flex items-center justify-center shrink-0">
-                    <svg
-                      className="w-3.5 h-3.5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  <span>{feature.text}</span>
-                </li>
-              ))}
-            </ul>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#5b21f3"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-check"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </div>
+                <span
+                  style={{
+                    fontSize: "0.9rem",
+                    color: "rgb(26, 26, 26)",
+                    fontWeight: 500,
+                  }}
+                >
+                  {feature.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Column: Link Analytics Dashboard Card */}
+        <div
+          className="rounded-2xl p-8"
+          style={{
+            background: "rgb(91, 33, 243)",
+            boxShadow: "rgba(91, 33, 243, 0.25) 0px 8px 30px",
+          }}
+        >
+          <div className="flex items-center gap-2 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-chart-column lucide-bar-chart-3"
+              aria-hidden="true"
+            >
+              <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+              <path d="M18 17V9" />
+              <path d="M13 17V5" />
+              <path d="M8 17v-3" />
+            </svg>
+            <span
+              style={{
+                fontWeight: 700,
+                fontSize: "0.95rem",
+                color: "rgb(255, 255, 255)",
+              }}
+            >
+              Link Analytics Dashboard
+            </span>
           </div>
 
-          {/* Right Column: Link Analytics Dashboard Card */}
-          <div className="w-full">
-            <div className="w-full bg-[#5b21f3] rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl shadow-purple-600/25 text-white">
-              {/* Card Header with typing cursor */}
-              <div className="flex items-center text-lg sm:text-xl font-bold tracking-tight text-white mb-6 sm:mb-8">
-                <span>Link Analytics Dashboard</span>
+          {analyticsData.map((item, idx) => (
+            <div
+              key={item.link}
+              className={idx === analyticsData.length - 1 ? "" : "mb-5"}
+            >
+              <div className="flex justify-between items-center mb-1.5">
+                <span
+                  style={{
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: "0.8rem",
+                    color: "rgba(255, 255, 255, 0.6)",
+                  }}
+                >
+                  {item.link}
+                </span>
+                <span
+                  style={{
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    color: "rgb(255, 255, 255)",
+                  }}
+                >
+                  {item.clicks}
+                </span>
               </div>
-
-              {/* Rows */}
-              <div className="space-y-6 sm:space-y-7">
-                {analyticsData.map((item) => (
-                  <div key={item.link}>
-                    <div className="flex items-center justify-between text-xs sm:text-sm font-mono tracking-tight">
-                      <span className="text-purple-100 font-medium">
-                        {item.link}
-                      </span>
-                      <span className="text-white font-bold">{item.clicks}</span>
-                    </div>
-
-                    {/* Proportional visual bar */}
-                    <div className="w-full bg-white/10 h-1.5 rounded-full mt-2.5 overflow-hidden">
-                      <div
-                        className="bg-white/30 h-full rounded-full transition-all duration-500"
-                        style={{ width: `${item.percentage}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <div
+                className="h-2 rounded-full overflow-hidden"
+                style={{ background: "rgba(255, 255, 255, 0.12)" }}
+              >
+                <div
+                  className="h-2 rounded-full"
+                  style={{
+                    width: `${item.percentage}%`,
+                    background: "rgba(255, 255, 255, 0.4)",
+                  }}
+                />
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

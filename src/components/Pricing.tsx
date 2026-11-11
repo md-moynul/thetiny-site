@@ -70,116 +70,138 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="w-full bg-[#fcfbfe] py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-t border-gray-100"
+      className="py-20 px-6"
+      style={{ background: "rgb(255, 255, 255)" }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="text-xs font-bold tracking-widest text-gray-400 uppercase">
+          <p
+            style={{
+              fontWeight: 700,
+              fontSize: "0.75rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "rgb(156, 163, 175)",
+              marginBottom: "8px",
+            }}
+          >
             PRICING
-          </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight">
+          </p>
+          <h2
+            style={{
+              fontWeight: 800,
+              fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
+              color: "rgb(26, 26, 26)",
+              lineHeight: 1.2,
+              marginBottom: "12px",
+            }}
+          >
             Simple, transparent pricing.
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-500">
+          <p style={{ fontSize: "0.95rem", color: "rgb(107, 114, 128)" }}>
             No hidden fees. Start free, scale when you&apos;re ready.
           </p>
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan) => {
             const isPro = plan.isPopular;
 
             return (
               <div
                 key={plan.name}
-                className={`flex flex-col justify-between rounded-3xl p-7 sm:p-8 lg:p-9 transition-all duration-300 ${isPro
+                className={`flex flex-col justify-between rounded-2xl p-8 transition-all ${
+                  isPro
                     ? "bg-[#5b21f3] text-white shadow-2xl shadow-purple-600/30 md:-translate-y-2 relative"
-                    : "bg-white text-gray-900 border border-gray-200/80 shadow-xs hover:shadow-lg hover:border-purple-200"
-                  }`}
+                    : "bg-white text-gray-900 border border-[#e5e7eb] hover:shadow-md transition-shadow"
+                }`}
               >
                 <div>
                   {/* Plan Name */}
-                  <span
-                    className={`text-xs font-bold tracking-wider uppercase ${isPro ? "text-purple-200" : "text-gray-400"
-                      }`}
+                  <p
+                    className={`text-xs font-bold tracking-wider mb-2 uppercase ${
+                      isPro ? "text-white/80" : "text-gray-500"
+                    }`}
                   >
                     {plan.name}
-                  </span>
+                  </p>
 
                   {/* Price */}
-                  <div className="mt-3 flex items-baseline">
+                  <div className="flex items-baseline gap-1 mb-2">
                     <span
-                      className={`text-4xl sm:text-5xl font-extrabold tracking-tight ${isPro ? "text-white" : "text-gray-950"
-                        }`}
+                      className={`text-4xl font-extrabold ${
+                        isPro ? "text-white" : "text-[#0a0a14]"
+                      }`}
                     >
                       {plan.price}
                     </span>
                     <span
-                      className={`ml-1.5 text-xs sm:text-sm font-medium ${isPro ? "text-purple-200" : "text-gray-400"
-                        }`}
+                      className={`text-xs ${
+                        isPro ? "text-white/80" : "text-gray-500"
+                      }`}
                     >
                       {plan.period}
                     </span>
                   </div>
 
-                  {/* Plan Description */}
+                  {/* Description */}
                   <p
-                    className={`mt-2.5 text-xs sm:text-sm leading-relaxed ${isPro ? "text-purple-100" : "text-gray-500"
-                      }`}
+                    className={`text-sm mb-6 ${
+                      isPro ? "text-white/80" : "text-gray-500"
+                    }`}
                   >
                     {plan.description}
                   </p>
 
                   {/* Features List */}
-                  <ul className="mt-6 sm:mt-7 space-y-3">
+                  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-2.5 text-xs sm:text-sm"
+                        className={`flex items-center gap-2.5 text-sm font-medium ${
+                          isPro ? "text-white" : "text-gray-800"
+                        }`}
                       >
-                        <span
-                          className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 ${isPro
-                              ? "bg-white/20 text-white"
-                              : "bg-[#f4effe] text-[#5b21f3]"
-                            }`}
+                        <div
+                          className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 ${
+                            isPro ? "bg-white/20" : "bg-[#5b21f3]/10"
+                          }`}
                         >
                           <svg
-                            className="w-2.5 h-2.5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="10"
+                            height="10"
                             viewBox="0 0 24 24"
                             fill="none"
-                            stroke="currentColor"
+                            stroke={isPro ? "#ffffff" : "#5b21f3"}
                             strokeWidth="3"
                             strokeLinecap="round"
                             strokeLinejoin="round"
+                            className="lucide lucide-check"
                             aria-hidden="true"
                           >
                             <polyline points="20 6 9 17 4 12" />
                           </svg>
-                        </span>
-                        <span
-                          className={isPro ? "text-white/95" : "text-gray-700"}
-                        >
-                          {feature}
-                        </span>
+                        </div>
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Call to Action Button */}
-                <div className="mt-8 pt-4">
-                  <Link
-                    href={plan.buttonHref}
-                    className={`w-full py-3 px-4 rounded-xl text-center text-xs sm:text-sm font-semibold transition-all inline-flex items-center justify-center gap-1 shadow-xs ${isPro
-                        ? "bg-white text-[#5b21f3] hover:bg-gray-50 active:bg-gray-100 font-bold"
-                        : "bg-[#5b21f3] hover:bg-[#4d1bd6] active:bg-[#4317be] text-white"
-                      }`}
-                  >
-                    {plan.buttonText}
-                  </Link>
-                </div>
+                {/* Card Button */}
+                <Link
+                  href={plan.buttonHref}
+                  className={`w-full py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-1.5 transition-all text-center ${
+                    isPro
+                      ? "bg-white text-[#5b21f3] hover:bg-white/95"
+                      : "bg-[#5b21f3] text-white hover:opacity-90"
+                  }`}
+                >
+                  {plan.buttonText}
+                </Link>
               </div>
             );
           })}
@@ -188,4 +210,3 @@ export default function Pricing() {
     </section>
   );
 }
-
